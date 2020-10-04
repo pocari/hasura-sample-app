@@ -4,6 +4,7 @@ import Error from 'next/error';
 
 import { useGetArticleQuery } from '@/generated/graphql';
 import styles from './index.module.css';
+import { Article } from '@/components/article';
 
 const ArticlePage: NextPage = () => {
   const router = useRouter();
@@ -40,7 +41,9 @@ const ArticlePage: NextPage = () => {
           <span className={styles.userName}>{user.displayName}</span>
         </div>
       </div>
-      <div className={styles.content}>{content}</div>
+      <div className={styles.content}>
+        <Article content={content} />
+      </div>
     </div>
   );
 };
