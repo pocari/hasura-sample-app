@@ -1,7 +1,7 @@
 ## hasura graphql engine と postgresql の起動
 
 ```
-dcoker-compose up
+docker-compose up
 ```
 
 ## Hasura GraphQL Engine のコンソール起動
